@@ -6,5 +6,27 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #cd0d0d;
+    padding: 10px;
+}
+
+header {
+    color: white;
+    text-align: center;
+    font-size: larger;
+    background: linear-gradient(to right, blue, rgb(14, 4, 79));
+    padding: 20px 0;
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    padding: 20px 0;
+    border:blueviolet 2px solid;
+    color: rgb(173, 26, 26);
+}
+
+.weather {
+    border: 10px solid rgb(173, 26, 26);
 }
