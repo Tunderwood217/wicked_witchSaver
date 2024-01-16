@@ -9,13 +9,21 @@
 <body>
   <header>Weather Dashboard</header>
   <main>
-    <aside>
-      <div id="city"><strong>Search for a City:</strong></div>
-      <form class="search"><input type="text"><button type="submit">Submit</button></form>
-      
-    </aside>
-    <div class="weather">hello
+  <aside>
+    <div class="title"><strong>Search for a City:</strong></div>
+    <form class="search"><input type="text"><button type="submit">Submit</button></form>
+  </aside>
+  <div class="weather">
+    <div class="currentWeather">
+      <div class="cityName"></div>
+      <div class="weatherDescription"></div>
+      <div class="temperature"></div>
+      <div class="humidity"></div>
+      <div class="windSpeed"></div>
     </div>
+    <div class="title">5 Day Weather Forcast:</div>
+      <div class="dayOne" class= "dayOneTemp" class= "dayOneHumidity" class= "dayOneWindSpeed"></div>
+  </div>
   </main>
   <script src="./assets/script.js"></script>
 </body>
