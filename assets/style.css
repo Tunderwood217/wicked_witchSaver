@@ -11,10 +11,13 @@ body {
 
 header {
     color: white;
+    font-style: sans-serif;
     text-align: center;
-    font-size: larger;
+    font-size: 20px;
+    font-weight: bold;
     background: linear-gradient(to right, blue, rgb(14, 4, 79));
     padding: 20px 0;
+    margin-top: 3px;
 }
 
 main {
@@ -22,11 +25,22 @@ main {
 }
 
 aside {
-    padding: 20px 0;
-    border:blueviolet 2px solid;
-    color: rgb(173, 26, 26);
+    padding: 10px 0;
+    margin-right: 15px;
+    color: rgb(17, 15, 30);
+}
+
+button {
+    display: block;
+    margin: 10px 0;
+
 }
 
 .weather {
-    border: 10px solid rgb(173, 26, 26);
+    margin-top: 10px;
+}
+
+#city {
+    padding-bottom: 10px;
+    font-weight: 800;
 }
