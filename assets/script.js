@@ -8,7 +8,7 @@ searchForm.addEventListener('submit', (e) => {
 });
 
 function getGeoLocation(searchQuery) {
-    const url = `http://api.openweathermap.org/geo/1.0/direct?q=${searchQuery}&appid=baba9a88af04fe7197ecea85bf60999a`;
+    const url = `https://api.openweathermap.org/geo/1.0/direct?q=${searchQuery}&appid=baba9a88af04fe7197ecea85bf60999a`;
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -23,7 +23,7 @@ function getGeoLocation(searchQuery) {
 };
 
 function getWeather(lat, lon) {
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=baba9a88af04fe7197ecea85bf60999a`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=baba9a88af04fe7197ecea85bf60999a`;
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -39,7 +39,7 @@ function getWeather(lat, lon) {
 };
 
 function getFiveDayForecast(lat, lon) {
-    const url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=baba9a88af04fe7197ecea85bf60999a`; 
+    const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=baba9a88af04fe7197ecea85bf60999a`; 
     fetch(url)
         .then(response => response.json())
         .then(data => {
