@@ -29,11 +29,14 @@ function getWeather(lat, lon) {
         .then(data => {
             console.log(data);
             displayWeather(data);
+            // Store data in local storage
+            localStorage.setItem('getWeather', JSON.stringify(data));
+            console.log(getWeather);
         })
         .catch(error => {
             console.log(error);
         });
-}; 
+};
 
 function getFiveDayForecast(lat, lon) {
     const url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=baba9a88af04fe7197ecea85bf60999a`; 
@@ -47,6 +50,39 @@ function getFiveDayForecast(lat, lon) {
             console.log(error);
         });
 };
+
+// function displayWeather(data) {
+    
+// };
+
+// function displayFiveDayForecast(data) {
+// };
+
+// function getWeather(lat, lon) {
+//     const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=baba9a88af04fe7197ecea85bf60999a`;
+//     fetch(url)
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//             displayWeather(data);
+//         })
+//         .catch(error => {
+//             console.log(error);
+//         });
+// }; 
+
+// function getFiveDayForecast(lat, lon) {
+//     const url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=baba9a88af04fe7197ecea85bf60999a`; 
+//     fetch(url)
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log(data);
+//             displayFiveDayForecast(data);
+//         })
+//         .catch(error => {
+//             console.log(error);
+//         });
+// };
 
 
 function displayWeather(data) {
@@ -114,20 +150,20 @@ function displayFiveDayForecast(data) {
     document.querySelector('.dayOneTemp').innerHTML = dayOneTemp;
     document.querySelector('.dayOneHumidity').innerHTML = dayOneHumidity;
     document.querySelector('.dayOneWindSpeed').innerHTML = dayOneWindSpeed;
-    // document.querySelector('.dayTwo').innerHTML = dayTwo;
-    // document.querySelector('.dayTwoTemp').innerHTML = dayTwoTemp;
-    // document.querySelector('.dayTwoHumidity').innerHTML = dayTwoHumidity;
-    // document.querySelector('.dayTwoWindSpeed').innerHTML = dayTwoWindSpeed;
-    // document.querySelector('.dayThree').innerHTML = dayThree;
-    // document.querySelector('.dayThreeTemp').innerHTML = dayThreeTemp;
-    // document.querySelector('.dayThreeHumidity').innerHTML = dayThreeHumidity;
-    // document.querySelector('.dayThreeWindSpeed').innerHTML = dayThreeWindSpeed;
-    // document.querySelector('.dayFour').innerHTML = dayFour;
-    // document.querySelector('.dayFourTemp').innerHTML = dayFourTemp;
-    // document.querySelector('.dayFourHumidity').innerHTML = dayFourHumidity;
-    // document.querySelector('.dayFourWindSpeed').innerHTML = dayFourWindSpeed;
-    // document.querySelector('.dayFive').innerHTML = dayFive;
-    // document.querySelector('.dayFiveTemp').innerHTML = dayFiveTemp;
-    // document.querySelector('.dayFiveHumidity').innerHTML = dayFiveHumidity;
-    // document.querySelector('.dayFiveWindSpeed').innerHTML = dayFiveWindSpeed;
+    document.querySelector('.dayTwo').innerHTML = dayTwo;
+    document.querySelector('.dayTwoTemp').innerHTML = dayTwoTemp;
+    document.querySelector('.dayTwoHumidity').innerHTML = dayTwoHumidity;
+    document.querySelector('.dayTwoWindSpeed').innerHTML = dayTwoWindSpeed;
+    document.querySelector('.dayThree').innerHTML = dayThree;
+    document.querySelector('.dayThreeTemp').innerHTML = dayThreeTemp;
+    document.querySelector('.dayThreeHumidity').innerHTML = dayThreeHumidity;
+    document.querySelector('.dayThreeWindSpeed').innerHTML = dayThreeWindSpeed;
+    document.querySelector('.dayFour').innerHTML = dayFour;
+    document.querySelector('.dayFourTemp').innerHTML = dayFourTemp;
+    document.querySelector('.dayFourHumidity').innerHTML = dayFourHumidity;
+    document.querySelector('.dayFourWindSpeed').innerHTML = dayFourWindSpeed;
+    document.querySelector('.dayFive').innerHTML = dayFive;
+    document.querySelector('.dayFiveTemp').innerHTML = dayFiveTemp;
+    document.querySelector('.dayFiveHumidity').innerHTML = dayFiveHumidity;
+    document.querySelector('.dayFiveWindSpeed').innerHTML = dayFiveWindSpeed;
 }
